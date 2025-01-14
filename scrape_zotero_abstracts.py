@@ -92,7 +92,7 @@ print(sum([1 if article['doi_url'] is None else 0 for article in article_data]))
 # 26 articles have no DOI, which is low enough to manually locate, but high enough to be tedious
 # I don't specifically need DOIs, I likely don't need a unique identifier at all, it's just good practice to have one
 # In case it's an issue, I'll stick a meaningless ID one on anyway
-for i in range(article_data):
+for i in iter(len((article_data))):
     article_data[i]['NODOI'] = i
 
 # save this as a python object
