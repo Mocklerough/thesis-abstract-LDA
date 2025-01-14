@@ -20,14 +20,16 @@ with open('raw_article_data.pkl', 'rb') as handle:
 
 # create a corpus of all article abstracts
 abstracts = [article['abstract_content'] for article in article_data]
+# remove punctuation and stopwords
+abstracts = re.sub(r'[^a-zA-Z]', ' ', abstracts)
+abstracts = " ".join([word for word in abstracts if word not in stopwords.words('english') and not word.isdigit()])
+abstracts = ''.join([word for word in abstracts if word not in set(string.punctuation)])
+
 
 # tokenise to prepare the corpus
 tokenized_abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
-# remove punctuation
-tokenized_abstracts = [re.sub(r'[^a-zA-Z]', ' ', abstract) for abstract in tokenized_abstracts]
-# remove abstracts
-tokenized_abstracts = [" ".join([word for word in abstract if word not in stopwords.words('english') and not word.isdigit()]) for abstract in tokenized_abstracts]
-tokenized_abstracts = [''.join([word for word in abstract if word not in set(string.punctuation)]) for abstract in tokenized_abstracts]
+
+
 print(tokenized_abstracts[0])
 dictionary = Dictionary(tokenized_abstracts)
 corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
