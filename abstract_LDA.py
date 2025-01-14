@@ -26,10 +26,10 @@ abstracts = [article['abstract_content'] for article in article_data]
 
 # remove punctuation and stopwords
 abstracts = [re.sub(r'[^a-zA-Z]', ' ', abstract) for abstract in abstracts]
-tokenized_abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
-tokenized_abstracts = [[word for word in abstract if word not in stopwords.words('english') and not word.isdigit()] for abstract in tokenized_abstracts]
+abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
+abstracts = [[word for word in abstract if word not in stopwords.words('english') and not word.isdigit()] for abstract in abstracts]
 # lemmatize
-tokenized_abstracts = [" ".join(WordNetLemmatizer().lemmatize(word) for word in abstract.split()) for abstract in abstracts]
+abstracts = [" ".join(WordNetLemmatizer().lemmatize(word) for word in abstract) for abstract in abstracts]
 # stem words
 
 for i in range(5):
