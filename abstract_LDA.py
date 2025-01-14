@@ -9,7 +9,7 @@
 import pickle
 from gensim.corpora.dictionary import Dictionary
 import nltk
-nltk.download('punkt_tab')
+# nltk.download('punkt_tab')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import string
