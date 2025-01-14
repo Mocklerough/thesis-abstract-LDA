@@ -5,4 +5,11 @@
  # @ Description: Scrape Abstracts and 
  '''
 
+# 0. Overhead
 
+import os
+from bs4 import BeautifulSoup
+
+zotero_url = ""
+
+print(os.getcwd())
