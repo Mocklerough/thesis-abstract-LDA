@@ -24,7 +24,7 @@ abstracts = [article['abstract_content'] for article in article_data]
 
 # remove punctuation and stopwords
 abstracts = [re.sub(r'[^a-zA-Z]', ' ', abstract) for abstract in abstracts]
-# abstracts = " ".join([word for word in abstracts if word not in stopwords.words('english') and not word.isdigit()])
+abstracts = " ".join([word for word in abstracts if word not in stopwords.words('english') and not word.isdigit()])
 # abstracts = ''.join([word for word in abstracts if word not in set(string.punctuation)])
 for i in range(5):
     print(i, ": ", abstracts[i][0:100])
