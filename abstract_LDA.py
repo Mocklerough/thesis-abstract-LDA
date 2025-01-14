@@ -68,9 +68,10 @@ corpus = [dictionary.doc2bow(abstract) for abstract in abstracts]
 # 3) tf-idf
 # Termfrequency-inversedocumentfrequency can be used to down-weight common words, letting other words have a bigger impact on the LDA
 
-tfidf = TfidfModel(corpus)
+tfidf_model = TfidfModel(corpus)
+tfidf_corpus = tfidf_model[corpus]
 
-tfidf_ldamodel = gensim.models.ldamodel.LdaModel(tfidf, num_topics = 4, id2word=dictionary, passes=15)
+tfidf_ldamodel = gensim.models.ldamodel.LdaModel(tfidf_corpus, num_topics = 4, id2word=dictionary, passes=15)
 tfidf_topics = tfidf_ldamodel.print_topics(num_words=5)
 print("YYYYYYYYYYY")
 print(tfidf_topics)
