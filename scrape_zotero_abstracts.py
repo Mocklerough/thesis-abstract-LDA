@@ -41,7 +41,7 @@ Over each <li>, pull out
     - <h2>
     - <table><tbody>(<tr> containing <th>Abstract</th>)<td>
     - <table><tbody>(<tr> containing <th>DOI</th>)<td>
-store each as a dict element, in a dict-of-dicts, save and pass to LDA script.
+store each as a dict element, in a list-of-dicts, save and pass to LDA script.
 """
 
 # grab the right li elements
@@ -51,3 +51,28 @@ print(len(li_elements)) # 328: correct # of elements
 for i, li in enumerate(li_elements[:6]):
     print(f"Title {i}: {li.find('h2')}")
 # first 6 names look correct
+
+# pull out the important elements
+abstract_data = []
+for li in li_elements:
+    h2 = li.find('h2')
+    
+    # Find the <th> with sibling <th>Abstract</th>
+    abstract_th = None
+    abstract_sibling = li.find(lambda tag: tag.name == 'th' and tag.text == 'Abstract')
+    if abstract_sibling and abstract_sibling.parent:
+        abstract_th = abstract_sibling.parent.find('th')
+    
+    # Find the <th> with sibling <th>DOI</th>
+    doi_th = None
+    doi_sibling = li.find(lambda tag: tag.name == 'th' and tag.text == 'DOI')
+    if doi_sibling and doi_sibling.parent:
+        doi_th = doi_sibling.parent.find('th')
+
+    # Append the data as a dictionary
+    abstract_data.append({
+        'h2': h2,
+        'abstract_th': abstract_th,
+        'doi_th': doi_th
+    })
+print(abstract_data[0])
