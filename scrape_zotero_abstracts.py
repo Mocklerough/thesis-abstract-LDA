@@ -8,6 +8,9 @@
 # 0. Overhead
 from bs4 import BeautifulSoup
 import numpy as np
+import pickle
+import pandas as pd
+
 zotero_url = "zotero_report_llm_articles.htm"
 
 # 1. Cook that soup
@@ -87,6 +90,17 @@ print(np.mean([1 if article['doi_url'] is not None else 0 for article in article
 # 92% have DOI
 print(sum([1 if article['doi_url'] is None else 0 for article in article_data]))
 # 26 articles have no DOI, which is low enough to manually locate, but high enough to be tedious
-missing_doi_articles = [article['title'] for article in article_data if article['doi_url'] is None]
-for article in missing_doi_articles:
-    print(article)
+# I don't specifically need DOIs, I likely don't need a unique identifier at all, it's just good practice to have one
+# In case it's an issue, I'll stick a meaningless ID one on anyway
+for i in range(article_data):
+    article_data[i]['NODOI'] = i
+
+# save this as a python object
+with open('raw_article_data.pkl') as outp:
+    pickle.dump(article_data, outp)
+
+# save as an excel file too, in case manual review is needed
+article_df = pd.DataFrame(article_data)
+article_df.to_excel("raw_article_data.xlsx", index=False)
+
+# Next, move to a separate file for LDA
