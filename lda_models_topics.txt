@@ -1,0 +1,49 @@
+Model with 2 Topics
+topic "llm", "human", "study", "science", "task"
+topic "ai", "method", "learning", "text", "analysis"
+
+Model with 3 Topics
+topic "llm", "human", "bias", "study", "behavior"
+topic "analysis", "text", "llm", "learning", "method"
+topic "ai", "science", "llm", "human", "method"
+
+Model with 4 Topics
+topic "text", "learning", "method", "approach", "computational"
+topic "llm", "human", "task", "science", "study"
+topic "topic", "study", "analysis", "method", "researcher"
+topic "ai", "llm", "science", "analysis", "human"
+
+Model with 5 Topics
+topic "human", "ai", "study", "science", "text"
+topic "topic", "task", "text", "concept", "measurement"
+topic "llm", "annotation", "text", "human", "task"
+topic "method", "analysis", "science", "computational", "text"
+topic "llm", "human", "ai", "study", "bias"
+
+Model with 6 Topics
+topic "ai", "bias", "human", "llm", "science"
+topic "learning", "method", "science", "machine", "approach"
+topic "llm", "text", "study", "analysis", "science"
+topic "ai", "artificial", "intelligence", "system", "learning"
+topic "human", "llm", "analysis", "ai", "qualitative"
+topic "llm", "human", "task", "study", "annotation"
+
+Model with 7 Topics
+topic "text", "method", "analysis", "topic", "computational"
+topic "llm", "task", "human", "performance", "text"
+topic "llm", "bias", "study", "public", "risk"
+topic "llm", "human", "ai", "science", "study"
+topic "machine", "science", "learning", "cs", "human"
+topic "method", "analysis", "machine", "learning", "using"
+topic "ai", "measurement", "theory", "cultural", "analysis"
+
+Model with 8 Topics
+topic "science", "learning", "text", "method", "approach"
+topic "llm", "ai", "human", "text", "task"
+topic "political", "approach", "learning", "science", "coding"
+topic "analysis", "method", "science", "llm", "text"
+topic "bias", "llm", "text", "method", "study"
+topic "machine", "learning", "tiktok", "science", "study"
+topic "llm", "human", "ai", "study", "behavior"
+topic "llm", "human", "learning", "method", "network"
+
