@@ -1,0 +1,49 @@
+Model with 2 Topics
+topic "ai", "llm", "qualitative", "analysis", "computational"
+topic "llm", "annotation", "task", "cs", "bias"
+
+Model with 3 Topics
+topic "llm", "agent", "cultural", "ai", "cs"
+topic "llm", "ai", "human", "text", "task"
+topic "visual", "rhetoric", "sociological", "property", "music"
+
+Model with 4 Topics
+topic "bias", "ai", "topic", "text", "computational"
+topic "llm", "ai", "human", "agent", "generative"
+topic "llm", "text", "task", "political", "topic"
+topic "layer", "toxic", "speech", "tweet", "emotion"
+
+Model with 5 Topics
+topic "qualitative", "coding", "llm", "chatgpt", "approach"
+topic "ner", "ctam", "validation", "health", "autonomous"
+topic "personality", "graph", "hateful", "speech", "movement"
+topic "llm", "ai", "human", "bias", "text"
+topic "voter", "topic", "coding", "partisan", "democratic"
+
+Model with 6 Topics
+topic "annotation", "cs", "llm", "chatgpt", "label"
+topic "worker", "digital", "scientist", "layer", "balance"
+topic "llm", "ai", "human", "bias", "method"
+topic "tiktok", "transfer", "reading", "text", "tuning"
+topic "site", "conspiracy", "conversational", "anthropology", "competency"
+topic "communication", "change", "chatgpt", "policy", "bert"
+
+Model with 7 Topics
+topic "measurement", "bias", "gender", "topic", "llm"
+topic "llm", "ai", "human", "task", "text"
+topic "cs", "healthcare", "sociology", "personality", "diversity"
+topic "belief", "feedback", "character", "image", "tiktok"
+topic "deductive", "rating", "cultural", "autonomous", "measure"
+topic "scientist", "health", "mental", "interaction", "emotional"
+topic "agency", "ethnography", "hypothesis", "migration", "genai"
+
+Model with 8 Topics
+topic "cs", "site", "literacy", "emotional", "emotion"
+topic "genai", "solution", "example", "negative", "deductive"
+topic "llm", "ai", "human", "text", "task"
+topic "classi", "tiktok", "cation", "mental", "embeddings"
+topic "implicit", "campaign", "hateful", "transfer", "migration"
+topic "personality", "culture", "embeddings", "represented", "toxic"
+topic "chatbots", "sensor", "ner", "citation", "event"
+topic "measurement", "peer", "autonomous", "variable", "ctam"
+
