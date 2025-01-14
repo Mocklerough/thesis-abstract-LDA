@@ -1,3 +1,27 @@
 {
-    "gitdoc.enabled": true
+    "gitdoc.enabled": true,
+    "autoHeader": {
+    "format": {
+        "startWith": "/**",
+        "middleWith": "*",
+        "endWith": "*/",
+        "headerPrefix": "@",
+    },
+    "header": {
+        "Author": "Daniel Lin",
+        "Create Time": {
+            "type": "createTime",
+            "format": "YYYY-MM-DD HH:mm:ss",
+        },
+        "Modified by": {
+            "type": "modifier",
+            "value": "Daniel Lin",
+        },
+        "Modified time": {
+            "type": "modifyTime",
+            "format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "Description": "",
+    }
+}
 }
