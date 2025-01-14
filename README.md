@@ -13,3 +13,5 @@ This has been done by 1) Identifying relevant computational social science journ
 These articles were collected using Zotero. A manual cleaning step ensured each article had an abstract, proper citation, and were not duplicated.
 
 ### Prepare corpus of Article Abstracts
+
+Zotero does not natively allow the direct download of just isolated abstracts, but the `Generate Report` option is useful here to produce an HTML file of the `Info` data of all articles in a collection. From here, there are a few tools available online to pull abstracts, but I found none that were maintained and unbroken, or that gave the exact data I need to feed into an LDA. Since this HTML file is well-formatted, a simple HTML-parser can be easily build in Python.
