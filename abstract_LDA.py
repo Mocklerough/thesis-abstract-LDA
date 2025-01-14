@@ -26,7 +26,6 @@ abstracts = [re.sub(r'[^a-zA-Z]', ' ', abstract) for abstract in abstracts]
 abstracts = " ".join([word for word in abstracts if word not in stopwords.words('english') and not word.isdigit()])
 abstracts = ''.join([word for word in abstracts if word not in set(string.punctuation)])
 
-
 # tokenise to prepare the corpus
 tokenized_abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
 
@@ -36,7 +35,7 @@ dictionary = Dictionary(tokenized_abstracts)
 corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
 
 print('finished')
-print(tokenized_abstracts[0])
+print(tokenized_abstracts[0:2])
 
 
 
