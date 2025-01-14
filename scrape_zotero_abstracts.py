@@ -45,8 +45,9 @@ store each as a dict element, in a dict-of-dicts, save and pass to LDA script.
 """
 
 # grab the right li elements
-li_elements = zotero_soup.find_all('li', lambda li: li.find('h2') is not None)
+li_elements = zotero_soup.find_all('li', lambda li: li and li.find('h2') is not None)
 # check results
-print(len(li_elements))
-for i, li in enumerate(li_elements[:6], start=1):
-    print(f"H2 Body {i}: {li.find('h2')}")
+print(len(li_elements)) # 328: correct # of elements
+for i, li in enumerate(li_elements[:6]):
+    print(f"Title {i}: {li.find('h2')}")
+# first 6 names look correct
