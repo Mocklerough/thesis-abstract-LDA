@@ -2,7 +2,8 @@
  # @ File Name: scrape_zotero_abstracts
  # @ Author: Alexander Karl
  # @ Create Time: 2025-01-13
- # @ Description: Scrape Abstracts and 
+ # @ Description: Scrape Abstracts from html file produced by Zotero
+ #                This is to move between my article collection with Zotero to grouping them with LDAs in the next step.
  '''
 
 # 0. Overhead
