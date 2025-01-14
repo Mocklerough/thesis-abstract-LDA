@@ -37,7 +37,7 @@ corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
 print('finished')
 print(type(tokenized_abstracts))
 print(len(tokenized_abstracts))
-print(tokenized_abstracts)
+print(tokenized_abstracts[0:200])
 
 
 
