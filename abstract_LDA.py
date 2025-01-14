@@ -33,13 +33,10 @@ abstracts = [[word for word in abstract if word not in stopwords.words('english'
 abstracts = [" ".join(WordNetLemmatizer().lemmatize(word) for word in abstract) for abstract in abstracts]
 abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
 
-for i in range(5):
-    print('Abstract', i, ": ", abstracts[i])
-
 # create dictionary of words used in all abstracts
 dictionary = Dictionary(abstracts)
 dictionary.filter_extremes(no_below=2, keep_n=50000)
-corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
+corpus = [dictionary.doc2bow(abstract) for abstract in abstracts]
 
 # 2) LDA model & fine-tuning
 
