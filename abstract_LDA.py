@@ -35,7 +35,8 @@ print(tokenized_abstracts[0])
 dictionary = Dictionary(tokenized_abstracts)
 corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
 
-
+print('finished')
+print(tokenized_abstracts[0])
 
 
 
