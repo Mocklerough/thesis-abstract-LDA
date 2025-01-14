@@ -14,6 +14,10 @@ with open('raw_article_data.pkl', 'rb') as handle:
     article_data = pickle.load(handle)    # list of {'title':str, 'abstract=str, doi_url=str, NODOI=int}, len=328
 
 # create a corpus of all article abstracts
-abstract_list = [article['abstract_content'] for article in article_data]
-for i in range(5):
-    print(abstract_list[i][0:30])
+abstracts = [article['abstract_content'] for article in article_data]
+
+# TODO: remove punctuation and stopwords
+tokenized_abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
+dictionary = Dictionary(tokenize_docs)
+print(tokenized_abstracts[0])
+print(dictionary[0:5])
