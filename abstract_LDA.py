@@ -17,6 +17,7 @@ from nltk.corpus import stopwords
 import string
 import re
 from nltk.stem.wordnet import WordNetLemmatizer
+import gensim
 
 with open('raw_article_data.pkl', 'rb') as handle:
     article_data = pickle.load(handle)    # list of {'title':str, 'abstract=str, doi_url=str, NODOI=int}, len=328
@@ -38,9 +39,18 @@ for i in range(5):
 
 
 
+# create dictionary of words used in all abstracts
+dictionary = Dictionary(abstracts)
+dictionary.filter_extremes(no_below=2, keep_n=50000)
+corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
 
-# dictionary = Dictionary(tokenized_abstracts)
-# corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
+# run LDA model
+ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = 3, id2word=dictionary, passes=15)
+
+# check topics
+topics = ldamodel.print_topics(num_words=4)
+for topic in topics:
+    print(topic)
 
 print('finished')
 
