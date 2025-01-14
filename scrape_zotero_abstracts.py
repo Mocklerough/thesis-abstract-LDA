@@ -96,7 +96,8 @@ for i in range(len(article_data)):
     article_data[i]['NODOI'] = i
 
 # save this as a python object
-with open('raw_article_data.pkl') as outp:
+with open('raw_article_data.pkl', "xb") as outp:
+
     pickle.dump(article_data, outp)
 
 # save as an excel file too, in case manual review is needed
