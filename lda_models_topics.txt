@@ -1,0 +1,49 @@
+Model with 2 Topics
+topic "llm", "text", "analysis", "study", "science"
+topic "llm", "human", "ai", "science", "study"
+
+Model with 3 Topics
+topic "ai", "llm", "human", "science", "analysis"
+topic "llm", "study", "human", "text", "based"
+topic "learning", "text", "science", "machine", "human"
+
+Model with 4 Topics
+topic "ai", "text", "science", "method", "computational"
+topic "llm", "human", "study", "bias", "science"
+topic "user", "analysis", "study", "network", "human"
+topic "llm", "human", "analysis", "task", "text"
+
+Model with 5 Topics
+topic "analysis", "text", "topic", "study", "ai"
+topic "science", "computational", "method", "learning", "approach"
+topic "ai", "human", "llm", "study", "bias"
+topic "llm", "human", "task", "science", "study"
+topic "human", "llm", "learning", "agent", "ai"
+
+Model with 6 Topics
+topic "llm", "bias", "study", "text", "survey"
+topic "analysis", "llm", "qualitative", "science", "approach"
+topic "llm", "human", "science", "study", "agent"
+topic "word", "learning", "study", "method", "synthetic"
+topic "ai", "human", "machine", "learning", "science"
+topic "llm", "text", "task", "method", "human"
+
+Model with 7 Topics
+topic "llm", "human", "analysis", "task", "science"
+topic "ai", "human", "science", "llm", "intelligence"
+topic "llm", "study", "network", "analysis", "human"
+topic "machine", "learning", "ai", "system", "study"
+topic "llm", "bias", "simulation", "human", "belief"
+topic "llm", "method", "study", "science", "using"
+topic "text", "learning", "analysis", "topic", "task"
+
+Model with 8 Topics
+topic "cs", "science", "ai", "use", "paper"
+topic "ai", "intelligence", "artificial", "learning", "human"
+topic "llm", "human", "study", "analysis", "gpt"
+topic "analysis", "bias", "method", "text", "computational"
+topic "llm", "human", "science", "annotation", "task"
+topic "llm", "human", "text", "study", "approach"
+topic "topic", "method", "learning", "coding", "user"
+topic "llm", "science", "use", "simulation", "task"
+
