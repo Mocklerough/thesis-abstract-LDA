@@ -11,6 +11,7 @@ from gensim.corpora.dictionary import Dictionary
 import nltk
 # nltk.download('punkt_tab')
 # nltk.download('stopwords')
+nltk.download('wordnet')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import string
