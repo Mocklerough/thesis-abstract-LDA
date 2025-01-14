@@ -1,0 +1,63 @@
+Model with 2 Topics
+Topic 0: 0.012*"science" + 0.011*"analysis" + 0.011*"human" + 0.010*"method" + 0.010*"text"
+
+Topic 1: 0.010*"llm" + 0.006*"user" + 0.006*"study" + 0.005*"content" + 0.005*"medium"
+
+Topic 2: 0.019*"llm" + 0.019*"ai" + 0.010*"human" + 0.005*"use" + 0.005*"study"
+
+Topic 3: 0.036*"llm" + 0.016*"human" + 0.011*"task" + 0.011*"bias" + 0.008*"study"
+
+Model with 3 Topics
+Topic 0: 0.016*"bias" + 0.009*"text" + 0.007*"human" + 0.007*"llm" + 0.007*"approach"
+
+Topic 1: 0.022*"llm" + 0.010*"analysis" + 0.010*"human" + 0.009*"text" + 0.009*"learning"
+
+Topic 2: 0.018*"ai" + 0.013*"science" + 0.009*"computational" + 0.008*"llm" + 0.007*"method"
+
+Topic 3: 0.024*"llm" + 0.017*"human" + 0.011*"study" + 0.007*"ai" + 0.006*"science"
+
+Model with 4 Topics
+Topic 0: 0.014*"ai" + 0.010*"analysis" + 0.009*"llm" + 0.007*"text" + 0.006*"framework"
+
+Topic 1: 0.013*"method" + 0.013*"science" + 0.012*"computational" + 0.009*"learning" + 0.009*"machine"
+
+Topic 2: 0.037*"llm" + 0.015*"human" + 0.009*"study" + 0.009*"task" + 0.008*"text"
+
+Topic 3: 0.022*"ai" + 0.018*"human" + 0.008*"intelligence" + 0.007*"coding" + 0.007*"artificial"
+
+Model with 5 Topics
+Topic 0: 0.024*"llm" + 0.017*"human" + 0.009*"task" + 0.008*"method" + 0.007*"study"
+
+Topic 1: 0.009*"learning" + 0.009*"analysis" + 0.009*"science" + 0.008*"text" + 0.008*"method"
+
+Topic 2: 0.010*"agent" + 0.009*"science" + 0.009*"learning" + 0.008*"cs" + 0.007*"approach"
+
+Topic 3: 0.027*"llm" + 0.014*"human" + 0.013*"ai" + 0.009*"study" + 0.007*"science"
+
+Model with 6 Topics
+Topic 0: 0.037*"llm" + 0.018*"human" + 0.010*"study" + 0.009*"science" + 0.007*"agent"
+
+Topic 1: 0.017*"llm" + 0.011*"text" + 0.011*"analysis" + 0.009*"human" + 0.009*"task"
+
+Topic 2: 0.010*"learning" + 0.010*"method" + 0.008*"machine" + 0.008*"user" + 0.007*"network"
+
+Topic 3: 0.032*"ai" + 0.012*"human" + 0.012*"science" + 0.009*"intelligence" + 0.009*"artificial"
+
+Model with 7 Topics
+Topic 0: 0.015*"ai" + 0.013*"analysis" + 0.009*"text" + 0.009*"human" + 0.008*"method"
+
+Topic 1: 0.014*"learning" + 0.013*"science" + 0.012*"method" + 0.010*"computational" + 0.009*"machine"
+
+Topic 2: 0.039*"llm" + 0.018*"human" + 0.010*"study" + 0.009*"bias" + 0.008*"science"
+
+Topic 3: 0.013*"llm" + 0.011*"task" + 0.010*"text" + 0.008*"performance" + 0.007*"analysis"
+
+Model with 8 Topics
+Topic 0: 0.013*"ai" + 0.013*"llm" + 0.010*"human" + 0.010*"science" + 0.007*"method"
+
+Topic 1: 0.011*"llm" + 0.009*"study" + 0.007*"human" + 0.007*"based" + 0.007*"agent"
+
+Topic 2: 0.031*"llm" + 0.016*"human" + 0.010*"science" + 0.010*"ai" + 0.010*"task"
+
+Topic 3: 0.011*"learning" + 0.010*"topic" + 0.008*"machine" + 0.008*"method" + 0.008*"text"
+
