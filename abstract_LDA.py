@@ -33,7 +33,7 @@ abstracts = [" ".join(WordNetLemmatizer().lemmatize(word) for word in abstract) 
 # stem words
 
 for i in range(5):
-    print("Abstract ", i, ": ", tokenized_abstracts[i][0:100])
+    print("Abstract ", i, ": ", abstracts[i][0:100])
 
 
 
