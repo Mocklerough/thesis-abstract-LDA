@@ -84,3 +84,5 @@ print(article_data[0])
 
 # check the DOIs. How many are missing
 print(np.mean([1 if article['doi_url'] is not None else 0 for article in article_data]))
+# 92% have DOI
+print(sum([1 if article['doi_url'] is None else 0 for article in article_data]))
