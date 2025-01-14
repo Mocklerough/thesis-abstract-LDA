@@ -1,0 +1,49 @@
+Model with 2 Topics
+topic "llm", "human", "ai", "science", "study"
+topic "text", "learning", "analysis", "method", "machine"
+
+Model with 3 Topics
+topic "text", "llm", "method", "analysis", "task"
+topic "ai", "human", "learning", "analysis", "machine"
+topic "llm", "human", "science", "study", "bias"
+
+Model with 4 Topics
+topic "text", "analysis", "sentiment", "tool", "method"
+topic "ai", "science", "human", "analysis", "llm"
+topic "llm", "human", "bias", "study", "science"
+topic "llm", "human", "learning", "task", "study"
+
+Model with 5 Topics
+topic "learning", "machine", "science", "based", "llm"
+topic "ai", "human", "analysis", "learning", "machine"
+topic "llm", "human", "study", "science", "analysis"
+topic "method", "analysis", "study", "computational", "learning"
+topic "llm", "human", "science", "text", "task"
+
+Model with 6 Topics
+topic "cs", "ai", "science", "method", "text"
+topic "llm", "science", "bias", "human", "annotation"
+topic "analysis", "text", "learning", "machine", "human"
+topic "ai", "llm", "human", "science", "intelligence"
+topic "study", "method", "learning", "text", "analysis"
+topic "llm", "task", "human", "performance", "text"
+
+Model with 7 Topics
+topic "computational", "text", "analysis", "tool", "learning"
+topic "learning", "machine", "study", "ai", "user"
+topic "ai", "science", "intelligence", "artificial", "llm"
+topic "llm", "human", "study", "science", "behavior"
+topic "analysis", "science", "method", "text", "cs"
+topic "llm", "human", "text", "task", "analysis"
+topic "bias", "llm", "study", "method", "human"
+
+Model with 8 Topics
+topic "computational", "method", "science", "cs", "network"
+topic "llm", "science", "human", "based", "ai"
+topic "ai", "text", "bias", "analysis", "intelligence"
+topic "llm", "ai", "human", "study", "science"
+topic "topic", "machine", "study", "learning", "method"
+topic "text", "analysis", "measurement", "sentiment", "method"
+topic "llm", "science", "method", "bias", "text"
+topic "llm", "human", "task", "learning", "study"
+
