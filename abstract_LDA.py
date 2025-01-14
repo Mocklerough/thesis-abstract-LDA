@@ -21,7 +21,7 @@ with open('raw_article_data.pkl', 'rb') as handle:
 # create a corpus of all article abstracts
 abstracts = [article['abstract_content'] for article in article_data]
 # remove punctuation and stopwords
-abstracts = re.sub(r'[^a-zA-Z]', ' ', abstracts)
+abstracts = [re.sub(r'[^a-zA-Z]', ' ', abstract) for abstract in abstracts]
 abstracts = " ".join([word for word in abstracts if word not in stopwords.words('english') and not word.isdigit()])
 abstracts = ''.join([word for word in abstracts if word not in set(string.punctuation)])
 
