@@ -55,24 +55,30 @@ for i, li in enumerate(li_elements[:6]):
 # pull out the important elements
 abstract_data = []
 for li in li_elements:
-    h2 = li.find('h2')
+    # Extract content of the <h2> tag
+    h2_content = li.find('h2').get_text(strip=True) if li.find('h2') else None
     
-    # Find the <th> with sibling <th>Abstract</th>
-    abstract_th = None
+    # Find and extract the content of the Abstract's sibling
     abstract_sibling = li.find(lambda tag: tag.name == 'th' and tag.text == 'Abstract')
-    if abstract_sibling and abstract_sibling.parent:
-        abstract_th = abstract_sibling.parent.find('td')
+    abstract_content = (
+        abstract_sibling.find_next_sibling('td').get_text(strip=True)
+        if abstract_sibling and abstract_sibling.find_next_sibling('td')
+        else None
+    )
     
-    # Find the <th> with sibling <th>DOI</th>
-    doi_th = None
+    # Find the DOI's sibling and extract the href URL
     doi_sibling = li.find(lambda tag: tag.name == 'th' and tag.text == 'DOI')
-    if doi_sibling and doi_sibling.parent:
-        doi_th = doi_sibling.parent.find('td')
-
-    # Append the data as a dictionary
+    doi_url = (
+        doi_sibling.find_next_sibling('td').find('a')['href']
+        if doi_sibling and doi_sibling.find_next_sibling('td') and doi_sibling.find_next_sibling('td').find('a')
+        else None
+    )
+    
+    # Append the extracted data as a dictionary
     abstract_data.append({
-        'h2': h2,
-        'abstract_th': abstract_th,
-        'doi_th': doi_th
+        'title': h2_content,
+        'abstract_content': abstract_content,
+        'doi_url': doi_url
     })
+
 print(abstract_data[0])
