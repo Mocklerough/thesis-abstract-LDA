@@ -10,6 +10,8 @@
 import os
 from bs4 import BeautifulSoup
 
-zotero_url = ""
+zotero_url = "zotero_report_llm_articles.htm"
 
-print(os.getcwd())
+# 1. Cook that soup
+zotero_soup = soup = BeautifulSoup(open(zotero_url, encoding="utf8"), "html.parser")
+zotero_soup
