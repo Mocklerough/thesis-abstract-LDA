@@ -8,20 +8,13 @@
         "headerPrefix": "@",
     },
     "header": {
-        "Author": "Daniel Lin",
+        "Author": "Alexander Karl",
         "Create Time": {
             "type": "createTime",
-            "format": "YYYY-MM-DD HH:mm:ss",
-        },
-        "Modified by": {
-            "type": "modifier",
-            "value": "Daniel Lin",
-        },
-        "Modified time": {
-            "type": "modifyTime",
-            "format": "YYYY-MM-DD HH:mm:ss"
+            "format": "YYYY-MM-DD",
         },
         "Description": "",
+        "Liscense": "Just take it."
     }
 }
 }
