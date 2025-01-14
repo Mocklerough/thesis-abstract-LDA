@@ -57,11 +57,10 @@ with open("lda_models_topics.txt", "w") as file:
         topics = ldamodel.print_topics(num_words=5)
         file.write(f"Model with {i} Topics\n")
         for topic_num, topic in topics:
-            file.write(f"Topic {topic_num}: {topic}\n")
+            words = [word.split("*")[1].strip('"') for word in topic.split(" + ")]
+            formatted_words = ', '.join([f'"{word}"' for word in words])
+            file.write(f"topic {formatted_words}\n")
         file.write("\n")
-
-
-
 
 print('finished')
 
