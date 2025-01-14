@@ -61,13 +61,13 @@ for li in li_elements:
     abstract_th = None
     abstract_sibling = li.find(lambda tag: tag.name == 'th' and tag.text == 'Abstract')
     if abstract_sibling and abstract_sibling.parent:
-        abstract_th = abstract_sibling.parent.find('th')
+        abstract_th = abstract_sibling.parent.find('td')
     
     # Find the <th> with sibling <th>DOI</th>
     doi_th = None
     doi_sibling = li.find(lambda tag: tag.name == 'th' and tag.text == 'DOI')
     if doi_sibling and doi_sibling.parent:
-        doi_th = doi_sibling.parent.find('th')
+        doi_th = doi_sibling.parent.find('td')
 
     # Append the data as a dictionary
     abstract_data.append({
