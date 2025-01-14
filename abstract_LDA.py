@@ -51,9 +51,9 @@ corpus = [dictionary.doc2bow(abstract) for abstract in abstracts]
 # Topic 2: human, learnig, ai, machine
 
 # that's an ok starting point, lets play around with the num_topics to see what happens
-with open("lda_models_topics.txt", "xw") as file:
+with open("lda_models_topics.txt", "w") as file:
     for i in range(2,9): 
-        ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = I, id2word=dictionary, passes=15)
+        ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = 4, id2word=dictionary, passes=15)
         topics = ldamodel.print_topics(num_words=5)
         file.write(f"Model with {i} Topics\n")
         for topic_num, topic in topics:
