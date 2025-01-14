@@ -73,14 +73,22 @@ tfidf_corpus = tfidf_model[corpus]
 
 tfidf_ldamodel = gensim.models.ldamodel.LdaModel(tfidf_corpus, num_topics = 4, id2word=dictionary, passes=15)
 tfidf_topics = tfidf_ldamodel.print_topics(num_words=5)
-print("YYYYYYYYYYY")
+
 print(tfidf_topics)
 for topic_num, topic in tfidf_topics:
     print(topic)
-    print("xxxxx------xxxxx")
-
+# this one looks better. Let's play around with the num_topics argument again
+with open("tfidf_lda_models_topics.txt", "w") as file:
+    for i in range(2,9): 
+        ldamodel = gensim.models.ldamodel.LdaModel(tfidf_corpus, num_topics = i, id2word=dictionary, passes=15)
+        topics = ldamodel.print_topics(num_words=5)
+        file.write(f"Model with {i} Topics\n")
+        for topic_num, topic in topics:
+            words = [word.split("*")[1].strip('"') for word in topic.split(" + ")]
+            formatted_words = ', '.join([f'"{word}"' for word in words])
+            file.write(f"topic {formatted_words}\n")
+        file.write("\n")
 print('finished')
-print('XZZZZZZZZZZZZZ')
 
 
 
