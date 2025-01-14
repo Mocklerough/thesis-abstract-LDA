@@ -31,18 +31,17 @@ abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
 abstracts = [[word for word in abstract if word not in stopwords.words('english') and not word.isdigit()] for abstract in abstracts]
 # lemmatize
 abstracts = [" ".join(WordNetLemmatizer().lemmatize(word) for word in abstract) for abstract in abstracts]
-# stem words
+abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
 
 for i in range(5):
-    print("Abstract ", i, ": ", abstracts[i][0:100])
-
-
-
+    print('Abstract', i, ": ", abstracts[i])
 
 # create dictionary of words used in all abstracts
 dictionary = Dictionary(abstracts)
 dictionary.filter_extremes(no_below=2, keep_n=50000)
 corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
+
+# 2) LDA model & fine-tuning
 
 # run LDA model
 ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = 3, id2word=dictionary, passes=15)
