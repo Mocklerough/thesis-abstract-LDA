@@ -6,10 +6,8 @@
  '''
 
 # 0. Overhead
-
-import os
 from bs4 import BeautifulSoup
-
+import numpy as np
 zotero_url = "zotero_report_llm_articles.htm"
 
 # 1. Cook that soup
@@ -53,7 +51,7 @@ for i, li in enumerate(li_elements[:6]):
 # first 6 names look correct
 
 # pull out the important elements
-abstract_data = []
+article_data = []
 for li in li_elements:
     # Extract content of the <h2> tag
     h2_content = li.find('h2').get_text(strip=True) if li.find('h2') else None
@@ -75,10 +73,14 @@ for li in li_elements:
     )
     
     # Append the extracted data as a dictionary
-    abstract_data.append({
+    article_data.append({
         'title': h2_content,
         'abstract_content': abstract_content,
         'doi_url': doi_url
     })
 
-print(abstract_data[0])
+print(article_data[0])
+#looks good
+
+# check the DOIs. How many are missing
+print(np.mean([1 if article['doi_url'] is not None else 0 for article in article_data]))
