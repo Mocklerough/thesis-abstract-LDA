@@ -47,6 +47,21 @@ ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = 3, id2word=dicti
 topics = ldamodel.print_topics(num_words=4)
 for topic in topics:
     print(topic)
+# Topic 0: llm, human, study, ai
+# Topic 1: llm, task, science, text
+# Topic 2: human, learnig, ai, machine
+
+# that's an ok starting point, lets play around with the num_topics to see what happens
+with open("lda_models_topics.txt", "xw") as file:
+    for i in range(2,9): 
+        topics = ldamodel.print_topics(num_words=i)
+        file.write(f"Model with {i} Topics\n")
+        for topic_num, topic in topics:
+            file.write(f"Topic {topic_num}: {topic}\n")
+            file.write("\n")
+
+
+
 
 print('finished')
 
