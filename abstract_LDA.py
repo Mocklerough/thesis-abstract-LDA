@@ -27,8 +27,8 @@ abstracts = " ".join([word for word in abstracts if word not in stopwords.words(
 abstracts = ''.join([word for word in abstracts if word not in set(string.punctuation)])
 
 # tokenise to prepare the corpus
-tokenized_abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
-
+# tokenized_abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
+tokenized_abstracts = word_tokenize(abstracts.lower())
 
 print(tokenized_abstracts[0])
 dictionary = Dictionary(tokenized_abstracts)
