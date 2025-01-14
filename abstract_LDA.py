@@ -41,12 +41,11 @@ corpus = [dictionary.doc2bow(abstract) for abstract in abstracts]
 # 2) LDA model & fine-tuning
 
 # run LDA model
-ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = 3, id2word=dictionary, passes=15)
-
+# ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = 3, id2word=dictionary, passes=15)
 # check topics
-topics = ldamodel.print_topics(num_words=4)
-for topic in topics:
-    print(topic)
+# topics = ldamodel.print_topics(num_words=4)
+# for topic in topics:
+#     print(topic)
 # Topic 0: llm, human, study, ai
 # Topic 1: llm, task, science, text
 # Topic 2: human, learnig, ai, machine
@@ -54,7 +53,8 @@ for topic in topics:
 # that's an ok starting point, lets play around with the num_topics to see what happens
 with open("lda_models_topics.txt", "xw") as file:
     for i in range(2,9): 
-        topics = ldamodel.print_topics(num_words=i)
+        ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = I, id2word=dictionary, passes=15)
+        topics = ldamodel.print_topics(num_words=5)
         file.write(f"Model with {i} Topics\n")
         for topic_num, topic in topics:
             file.write(f"Topic {topic_num}: {topic}\n")
