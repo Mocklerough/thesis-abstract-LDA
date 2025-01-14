@@ -11,7 +11,7 @@ from gensim.corpora.dictionary import Dictionary
 import nltk
 # nltk.download('punkt_tab')
 # nltk.download('stopwords')
-nltk.download('wordnet')
+# nltk.download('wordnet')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import string
@@ -33,14 +33,14 @@ tokenized_abstracts = [" ".join(WordNetLemmatizer().lemmatize(word) for word in 
 # stem words
 
 for i in range(5):
-    print("Abstract ", i, ": ", tokenized_abstracts[i])
+    print("Abstract ", i, ": ", tokenized_abstracts[i][0:100])
 
 
 
 
 
-dictionary = Dictionary(tokenized_abstracts)
-corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
+# dictionary = Dictionary(tokenized_abstracts)
+# corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
 
 print('finished')
 
