@@ -8,6 +8,8 @@
 # 0. Overhead
 import pickle
 from gensim.corpora.dictionary import Dictionary
+import nltk
+nltk.download('punkt_tab')
 from nltk.tokenize import word_tokenize
 
 with open('raw_article_data.pkl', 'rb') as handle:
@@ -18,6 +20,6 @@ abstracts = [article['abstract_content'] for article in article_data]
 
 # TODO: remove punctuation and stopwords
 tokenized_abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
-dictionary = Dictionary(tokenize_docs)
+dictionary = Dictionary(tokenized_abstracts)
 print(tokenized_abstracts[0])
 print(dictionary[0:5])
