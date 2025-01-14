@@ -86,3 +86,5 @@ print(article_data[0])
 print(np.mean([1 if article['doi_url'] is not None else 0 for article in article_data]))
 # 92% have DOI
 print(sum([1 if article['doi_url'] is None else 0 for article in article_data]))
+# 26 articles have no DOI, which is low enough to manually locate, but high enough to be tedious
+print([article['title'] for article in article_data if article['doi_url'] is None])
