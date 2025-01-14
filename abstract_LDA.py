@@ -16,4 +16,4 @@ with open('raw_article_data.pkl', 'rb') as handle:
 # create a corpus of all article abstracts
 abstract_list = [article['abstract_content'] for article in article_data]
 for i in range(5):
-    print(abstract_list[i])
+    print(abstract_list[i][0:30])
