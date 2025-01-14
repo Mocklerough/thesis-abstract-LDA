@@ -13,6 +13,7 @@ nltk.download('punkt_tab')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import string
+import re
 
 with open('raw_article_data.pkl', 'rb') as handle:
     article_data = pickle.load(handle)    # list of {'title':str, 'abstract=str, doi_url=str, NODOI=int}, len=328
