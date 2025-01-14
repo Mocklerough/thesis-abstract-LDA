@@ -21,5 +21,5 @@ abstracts = [article['abstract_content'] for article in article_data]
 # TODO: remove punctuation and stopwords
 tokenized_abstracts = [word_tokenize(abstract.lower()) for abstract in abstracts]
 dictionary = Dictionary(tokenized_abstracts)
-print(tokenized_abstracts[0])
-print(dictionary)
+corpus = [dictionary.doc2bow(abstract) for abstract in tokenized_abstracts]
+print(corpus)
